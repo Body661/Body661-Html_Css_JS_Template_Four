@@ -1,0 +1,422 @@
+:root {
+  --mainColor: #00bcd4;
+  --mainColorAlt: #01a7bd;
+  --mainTransition: 0.5s;
+}
+body {
+  font-family: "Cairo", sans-serif;
+  font-family: "Open Sans", sans-serif;
+}
+.container {
+  padding-left: 60px;
+  padding-right: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 991px) {
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.special-span {
+  color: var(--mainColor);
+  font-size: 14px;
+  font-weight: bold;
+}
+/* end Global rules */
+/* Start Header */
+header {
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  border-bottom: white 1px solid;
+  transition: var(--mainTransition);
+}
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  position: relative;
+}
+@media (max-width: 991px) {
+  header .container {
+    justify-content: space-between;
+  }
+}
+header h1 {
+  font-size: 25px;
+  letter-spacing: -1px;
+  color: white;
+}
+@media (min-width: 1200px) {
+  header h1 {
+    margin-right: 100px;
+  }
+}
+header h1 span {
+  font-size: 18px;
+}
+@media (max-width: 761px) {
+  header h1 {
+    font-size: 18px;
+  }
+  header h1 span {
+    font-size: 12px;
+  }
+}
+header .menu {
+  display: none;
+  color: var(--mainColor);
+  background-color: transparent;
+  padding: 35px 18px;
+}
+/* header .menu:hover + ul {
+  display: flex;
+} */
+@media (max-width: 991px) {
+  header .menu {
+    display: flex;
+    position: absolute;
+    right: 8px;
+  }
+}
+header .links {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 50px;
+}
+@media (max-width: 991px) {
+  header .links {
+    display: none;
+    position: absolute;
+    top: calc(100% - 15px);
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    padding: 0%;
+    right: 0;
+    left: 0;
+    height: 200px;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+  }
+  header .links:hover {
+    display: flex;
+  }
+}
+header .links a {
+  margin: 0 20px;
+  font-size: 14px;
+  transition: var(--mainTransition);
+  color: white;
+}
+@media (max-width: 991px) {
+  header .links a {
+    color: black !important;
+  }
+  header .links li {
+    position: relative;
+    width: 100%;
+    padding: 5px;
+  }
+  header .links a:not(.not)::after {
+    content: "";
+    position: absolute;
+    background-color: rgb(211, 211, 211);
+    width: 100%;
+    height: 1px;
+    bottom: -10px;
+    right: 0;
+  }
+}
+header .links .active {
+  color: var(--mainColor) !important;
+}
+header .links a:hover {
+  color: var(--mainColor) !important;
+}
+header button {
+  font-size: 14px;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: var(--mainTransition);
+}
+@media (max-width: 761px) {
+  header button {
+    padding: 5px 10px;
+    display: flex;
+  }
+}
+@media (max-width: 991px) {
+  header .log {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 761px) {
+  header .log {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+}
+header .log-in {
+  background-color: transparent;
+  border: solid white 2px;
+  color: white;
+}
+
+header .log-in:hover {
+  color: var(--mainColor) !important;
+  background-color: white;
+}
+header .sign-up {
+  background-color: var(--mainColor);
+  border: solid var(--mainColor) 2px;
+  color: white;
+}
+header .sign-up:hover {
+  background-color: var(--mainColorAlt);
+  border: solid var(--mainColorAlt) 2px;
+}
+/* End Header */
+/* ٍStart Page Title */
+.page-title {
+  background-image: url(../images/heading-bg.jpg);
+  background-size: cover;
+  padding: 230px 0 180px 0;
+}
+.page-title .container {
+  text-align: center;
+}
+.page-title .container h1 {
+  color: white;
+  font-size: 45px;
+}
+.page-title .container span {
+  color: white;
+}
+.page-title .container span a {
+  color: #ccc;
+}
+/* ٍEnd Page Title */
+/* Start about us */
+.background-aboutUs {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background-color: #ececec;
+}
+.background-aboutUs .container .about-Us {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+@media (max-width: 991px) {
+  .background-aboutUs .container .about-Us {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+}
+@media (max-width: 991px) {
+  .background-aboutUs .container .about-Us img {
+    display: none;
+  }
+}
+.background-aboutUs .container .about-Us img {
+  max-width: 100%;
+}
+.background-aboutUs .container .about-Us h2 {
+  font-size: 30px;
+}
+.background-aboutUs .container .about-Us .info p {
+  line-height: 1.6;
+  color: #777;
+  border-bottom: 1px solid;
+  padding-bottom: 20px;
+}
+.background-aboutUs .container .contentBtn {
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 15px 15px 15px 0px;
+  color: black;
+}
+.background-aboutUs .container .contentBtn:first-of-type {
+  color: var(--mainColor);
+}
+.background-aboutUs .container .content {
+  line-height: 1.6;
+  color: #777;
+}
+/* .background-aboutUs .container .aboutOur-services {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  gap: 25px;
+} 
+@media (max-width: 991px) {
+  .background-aboutUs .container .aboutOur-services {
+    flex-basis: 100%;
+    flex-flow: wrap;
+  }
+}
+.background-aboutUs .container .aboutOur-services .box {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 2px 4px 4px #ccc, 4px 8px 12px #ccc;
+}
+.background-aboutUs .container .aboutOur-services h3 {
+  color: var(--mainColor);
+}
+.background-aboutUs .container .aboutOur-services p {
+  line-height: 1.8;
+  color: #777;
+} */
+/* End about us */
+/* Start Our Team */
+.our-team {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+.our-team .container {
+  text-align: center;
+}
+.our-team .container h2 {
+  font-size: 30px;
+}
+@media (max-width: 761px) {
+  .our-team .container h2 {
+    font-size: 22px;
+  }
+}
+.our-team .container p {
+  color: #777;
+  font-size: 14px;
+  max-width: 500px;
+  line-height: 1.6;
+  margin: 0 auto;
+}
+.our-team .container .team-mate {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 50px;
+}
+.our-team .container .team-mate .team img {
+  max-width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.our-team .container .team img:hover {
+  opacity: 0.5;
+  transition: 00.5s;
+}
+.our-team .container .team-mate .team {
+  background-color: #ececec;
+  width: fit-content;
+  box-shadow: 2px 4px 4px #ccc, 4px 8px 12px #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.our-team .container .team-mate .team .info {
+  padding: 15px;
+}
+
+/* End Our Team */
+/* Start Testimonials */
+.testimonials {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: #ececec;
+}
+.testimonials .info {
+  text-align: center;
+  margin-bottom: 100px;
+}
+.testimonials .info h2 {
+  font-size: 35px;
+}
+@media (max-width: 761px) {
+  .testimonials .info h2 {
+    font-size: 25px;
+  }
+}
+.testimonials .boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+.testimonials .box {
+  text-align: center;
+  background-color: white;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 2px 4px 4px #ccc, 4px 8px 12px #ccc;
+}
+.testimonials .box i {
+  background: linear-gradient(
+    145deg,
+    rgba(114, 2, 187, 1) 0%,
+    rgba(50, 100, 245, 1) 100%
+  );
+  color: white;
+  padding: 20px;
+  border-radius: 50%;
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+.testimonials .box q {
+  color: #777;
+  line-height: 1.8;
+}
+/* End Testimonials */
+/* Start Footer */
+footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-image: url(../images/footer-bg.jpg);
+  background-size: cover;
+  color: white;
+}
+footer .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  border-bottom: 1px solid #ccc;
+}
+footer .container .about p {
+  line-height: 1.6;
+}
+footer ul {
+  padding-left: 0;
+}
+footer .container .box ul li {
+  padding: 8px;
+}
+footer .container .box ul li a {
+  color: white;
+  margin-left: 0;
+}
+footer .container .box ul li:hover {
+  transition: 0.5s;
+  padding-left: 20px;
+}
+footer .copy-right {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 20px;
+}
+/* End Footer */
